@@ -7,7 +7,11 @@ from flask import Flask, request, jsonify, render_template
 # model_names,description,manufacturer,modelDate,engineDisplacement,price,mileageFromOdometer,vehicleTransmission,fuelType,
 app=Flask(__name__)
 cors=CORS(app)
-model=pickle.load(open('RandomForestModel.pkl','rb'))
+
+with zipfile.ZipFile('RandomForestModel.zip', 'r') as zip_ref:
+    with zip_ref.open('RandomForestModel.pkl') as model_file:
+        model = pickle.load(model_file)
+# model=pickle.load(open('RandomForestModel.pkl','rb'))
 car=pd.read_csv('model_data.csv')
 company_models = {}
 
