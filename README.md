@@ -20,7 +20,7 @@ The **Used Car Price Prediction Model** is built to help users estimate the mark
 - `static/css/style.css`: The CSS file for styling the web interface.
 - `application.py`: The main Flask application file to run the web server.
 - `model_data.csv`: The dataset used to train the model.
-- `RandomForestModel.zip`: Contains the trained model file (`.pkl`). Users must extract the `.pkl` file from this zip and place it in the main directory (not in any subfolder).
+- `RandomForestModel.zip`: Contains the trained model file (`.pkl`).
 
 ## Installation
 
